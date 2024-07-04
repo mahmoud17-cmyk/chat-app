@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+:root {
+    --PaleViolet: hsl(276, 100%, 81%);
+    --ModerateViolet : hsl(276, 55%, 52%);
+    --DesaturatedDarkViolet: hsl(271, 15%, 43%);
+    --GrayishBlue: hsl(206, 6%, 79%);
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+    --DarkGrayishViolet: hsl(270, 7%, 64%);
+    /* Gradients */
+    --LightMagenta: hsl(293, 100%, 63%);
+    --LightViolet: hsl(264, 100%, 61%);
+
+}
+body {
+    font-family: "Rubik", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vw;
+}
+.background-left {
+    width: 435px;
+    height: 800px;
+    background: linear-gradient(90deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    position: absolute;
+    z-index: -100;
+    left: 0;
+    top: 0;
+    border-bottom-left-radius: 250px;
+    border-bottom-right-radius: 250px;
+}
+.background-right {
+    width: 300px;
+    height: 800px;
+    background-color: #ffecf3;
+    position: absolute;
+    z-index: -100;
+    right: 0;
+    bottom: 0;
+    border-top-left-radius: 310px;
+    border-top-right-radius: 0;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width:767px) {
+    .container {
+        flex-direction: column;
+        padding-top: 25vh;
+    }
+    .container .phone {
+        margin: 35px;
+    }
+    .background-right {
+        display: none;
+    }
+    .background-left{
+        left: -50%;
+    }
+    .container .page-text {
+        text-align: center;
+        margin: 25px;
+    }
+
+}
+.container .phone  {
+    width: 340px;
+    margin-left: 10vw;
+    background-color: #fff;
+    border: 15px solid white;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 72vh;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.container .phone .header {
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.container .phone .header .camera {
+    position: absolute;
+    width: 50%;
+    height: 20px;
+    background-color: white;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.container .phone .header .phone-header {
+    background: linear-gradient(160deg,  hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    padding-top: 15px;
+}
+.container .phone .header .info {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+    align-items: center;
+}
+.container .phone .header .info .left {
+    display: flex;
+    align-items: center;
+}
+.container .phone .header .info .left > i {
+    margin-right: 10px;
+    
+}
+.container .phone .header .info .left > img {
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid white;
+    width: 36px;
+}
+.container .phone .header .info .left .txt p {
+    font-weight: lighter;
+}
+.container .chat {
+    padding: 10px;
+    background-color:  #f9f4f6;
+}
+.container .chat p {
+    font-weight: lighter;
+}
+.container .chat .p1 {
+    
+}
+.container .chat .p1,
+.container .chat .p2,
+.container .chat .sam-txt p {
+    max-width: 80%;
+    margin-bottom: 10px;
+    color: var(--ModerateViolet);
+    background-color: hsla(289, 100%, 72%, 0.096);
+    border-radius: 15px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding: 10px;
+}
+.container .chat .dogs {
+    text-align: end;
+}
+.container .chat .dogs .dog-images img {
+    width: 50px;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+.container .chat .dogs-chat .p3{
+    margin-left: 11%;
+}
+
+.container .chat .dogs-chat .p3,
+.container .chat .dogs-chat span {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    color: black;
+    margin-top: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+} 
+.container .chat .dogs-chat span {
+    display: block;
+    margin-left: 35%;
+}
+.container .chat .prices .price-1,
+.container .chat .prices .price-2 {
+    background: linear-gradient(160deg,  hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    margin-bottom: 10px;
+    display: flex;
+    max-width: 70%;
+    border-radius: 10px;
+    padding: 11px;
+    color: white;
+    justify-content: space-between;
+}
+.container .chat .prices span {
+    font-weight: bold;
+}
+.container form {
+    position: relative;
+}
+.container form input {
+        border: none; 
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.container form::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.container form::after {
+    font-family: "Font Awesome 5 free";
+    content: "\f054";
+    font-weight: 900;
+    color: white;
+    position: absolute;
+    right: 17px;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.container form input::placeholder {
+    font-weight: 100;
+}
+.container form input:focus {
+    outline: none;
+}
+.container .page-text {
+    flex-basis: 40%;
+    
+}
+.container .page-text h1 {
+
+}
+.container .page-text p {
+    color: gray;
+    line-height: 1.9;
+}
